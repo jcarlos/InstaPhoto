@@ -18,12 +18,15 @@
     feedViewController.title = @"Feed";
     UIViewController *favoritesViewController = [[UIViewController alloc] init];
     favoritesViewController.title = @"Favorites";
-    
+    UIViewController *profileViewController = [[UIViewController alloc] init];
+    profileViewController.title = @"Profile";
+
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    [tabBarController setViewControllers:@[feedViewController, favoritesViewController]];
+    [tabBarController setViewControllers:@[feedViewController, favoritesViewController, profileViewController]];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
     
     
